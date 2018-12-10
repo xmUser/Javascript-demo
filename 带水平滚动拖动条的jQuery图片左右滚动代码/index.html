@@ -1,0 +1,45 @@
+<!DOCTYPE>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title></title>
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<link href="css/sucaijiayuan.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+	<!-- 代码 开始 -->
+	<div id="zsgun">
+		<a href="http://www.sucaijiayuan.com" class="prenext zspre"></a>
+		<a href="http://www.sucaijiayuan.com" class="prenext zsnext"></a>
+		<div id="gundiv" class="container2">
+			<ul>
+				<li><img src="images/img01.jpg" alt="" width="153" height="153"/></li>
+				<li><img src="images/img02.jpg" alt="" width="153" height="153"/></li>
+				<li><img src="images/img03.jpg" alt="" width="153" height="153"/></li>
+				<li><img src="images/img04.jpg" alt="" width="153" height="153"/></li>
+				<li><img src="images/img05.jpg" alt="" width="153" height="153"/></li>
+				<li><img src="images/img01.jpg" alt="" width="153" height="153"/></li>
+				<li><img src="images/img02.jpg" alt="" width="153" height="153"/></li>
+				<li><img src="images/img03.jpg" alt="" width="153" height="153"/></li>
+				<li><img src="images/img04.jpg" alt="" width="153" height="153"/></li>
+				<li><img src="images/img05.jpg" alt="" width="153" height="153"/></li>
+			</ul>
+		</div>
+	</div>
+	<script type="text/javascript" src="js/hScrollPane.js"></script>
+	<script type="text/javascript">
+		$(function() {
+			var glen = $("#gundiv ul li").length;
+			$("#gundiv ul").css("width",172 * (glen));
+		});
+		$("#zsgun").hScrollPane({
+			mover:"ul",
+			moverW:function(){return $("#zsgun li").length*172-17;}(),
+			showArrow:true,
+			handleCssAlter:"draghandlealter"
+		});
+	</script>
+	<!-- 代码 结束 -->
+</div>
+</body>
+</html>
